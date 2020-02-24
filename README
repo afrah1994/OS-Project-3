@@ -1,0 +1,22 @@
+How to run the program
+These are the following commands that the project can do:
+  -h 
+  -s , -s5
+  -l , -llog.dat 
+  -t, -t5
+
+Shared memory and cleanup:
+
+The program has shared memory for simulated time in seconds, simulated time in nanoseconds, shared memory message array ([0]- holds PID of user process, [1], holds user process time limit seconds, [2] holds user process time limit in nanoseconds), a counter to keep track of number of user processes created and a semaphore for the user processes,
+The master waits for the processes to finish before launching more processes.
+The child uses a do-while loop to wait for semaphores and exits once it has updated shared message array.
+The program has a cleanup function that is called once time limit (-t) is reached or 100 processes have been forked or simulated clock has reached 2 seconds. 
+
+
+Problems during the project
+1. I had a lot of problems during the project, infinite loop, only 27 forks, some segmentation faults. But thanks to professor mark I was able to correct all of them!
+
+
+
+
+
